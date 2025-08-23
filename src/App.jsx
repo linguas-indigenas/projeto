@@ -9,22 +9,17 @@ function App() {
    
      
 
-       <Router basename="/linguas_indigenas/">
+       
      
-      <div className="pt-20">
-        <Routes>
-          <Route
-            path="/"
-            element={
+     
+     
+      
               <>
                 <Home/>
+             
               
               </>
-            }
-          />
-        </Routes>
-      </div>
-    </Router>
+        
    
   )
 }
