@@ -1,5 +1,6 @@
 import './Home.css';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import letreiro from '../assets/letreiro_logo.svg';
 import ms1 from '../assets/ms1.svg';
@@ -11,9 +12,14 @@ import ms6 from '../assets/ms6.svg';
 import ms7 from '../assets/ms7.svg';
 import desenho_indigena from '../assets/desenhos_indigenas.svg'
 
+import img_pesquisa from '../assets/Pesquisas.svg';
+import img_fotos from '../assets/Fotos_registros.svg';
+import nosso_curso from '../assets/nosso_curso.svg';
+
 
 import { MdOutlineSearch,  MdOutlineAddAPhoto, MdClass
  } from "react-icons/md";
+import Pesquisa from './Pesquisa/Pesquisa';
 
 
 const Home = () => {
@@ -25,7 +31,7 @@ const Home = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setIdx((i) => (i + 1) % imagensMS.length);
-    }, 5000); // troca a cada 3s
+    }, 5000); 
     return () => clearInterval(id);
   }, [imagensMS.length]);
 
@@ -43,11 +49,12 @@ const Home = () => {
 
         <div className="apresentacao" >
 
-            <div className='img_logo'  >
+            <div className='img_logo' >
 
                 
-                 <img className='imagem_ms' src= {imagensMS[idx]} alt="" /> 
+               
                   <img className='letreiro'  src= {letreiro} alt="" /> 
+                    <img className='imagem_ms' src= {imagensMS[idx]} alt="" /> 
 
             </div>
 
@@ -63,25 +70,25 @@ const Home = () => {
 
             <div className='sessoes' >
 
-                <div className='sessao' >
+                <Link to="/pesquisa" className='sessao' >
 
                     <div className='icone_texto_card'><MdOutlineSearch /></div>
                     
-                <div className='icone_texto_card' >Pesquisas </div> 
-                </div>
+                <div className='icone_texto_card' > <img src={img_pesquisa} /> </div> 
+                </Link>
 
                   <div className='sessao' >
 
                     <div className='icone_texto_card' > <MdOutlineAddAPhoto /></div>
                     
-                       <div className='icone_texto_card'> Imagens </div>
+                       <div className='icone_texto_card'> <img src={img_fotos} /> </div>
                 </div>
 
                    <div className='sessao' >
 
                     <div className='icone_texto_card'><MdClass /></div>
                     
-                     <div className='icone_texto_card'>Conheça o nosso curso </div>
+                     <div className='icone_texto_card'> <img src={nosso_curso} />  </div>
                 </div>
 
                 
@@ -100,11 +107,11 @@ const Home = () => {
         <div className='linguagens'>
 
           
-              <div> <h1>Escolha uma linguagem para conhecer</h1></div>
+              <div> <h1>Escolha uma língua para conhecer</h1></div>
 
             <div className='botoes' >
 
-                <button className='botao_linguagem' > <h1>OFAIÉ  </h1></button>
+                <Link to='/ofaie' className='botao_linguagem' > <h1>OFAIÉ  </h1></Link>
                <button className='botao_linguagem' > <h1>  TERENA </h1> </button>
                <button className='botao_linguagem' > <h1>  KINIKINAU</h1></button>
 
@@ -121,14 +128,12 @@ const Home = () => {
 
             </div>
         </div>
+        <img className='desenho_indigena' src={desenho_indigena} />
 
 
         </div>
 
-          <footer className="rodape">
-      <p>&copy; {new Date().getFullYear()} . Todos os direitos reservados.</p>
-       <p>Projeto Linguas Indígenas MS.</p>
-     </footer>
+      
            
     </main>
 

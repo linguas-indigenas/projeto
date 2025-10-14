@@ -1,0 +1,84 @@
+.navbar{
+
+
+     display: flex;
+    position:fixed;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 20px;
+    text-decoration: none;
+    z-index: 1000;
+   
+    
+    
+}
+
+
+.content{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color: #1C1C1C;
+    width: 90%;
+    color: #fff;
+     height: 70px;
+     border-radius: 10px;
+    
+   
+}
+
+
+.logo_projeto{
+   
+    display: flex;
+  
+
+     justify-content: flex-start;
+      padding-left: 2%;
+   
+}
+
+
+.paginas_projeto{
+
+    display: flex;
+    justify-content: center;
+   
+  
+      width: 100%;
+      gap: 1rem;
+}
+
+
+.imagem_logo{
+
+    height: 50px;
+}
+
+
+.paginas_menu h4 {
+
+     text-decoration: none;
+     color: #fff;
+
+
+}
+
+.texto{
+
+    text-decoration: none;
+}
+
+
+@media (min-width: 600px) {
+
+.paginas_projeto{
+
+   
+      gap: 10rem;
+}
+
+
+}
