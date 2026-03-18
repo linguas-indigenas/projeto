@@ -1,6 +1,7 @@
 .conteudo{
 
     width: 100%;
+    background-color: #ECEAC3;
    
 }
 
@@ -67,6 +68,16 @@
    
     color: #000;
      padding: 2%;
+      background-color: #FFF;
+
+
+}
+.sessao_linguagens{
+
+   
+    color: #000;
+     padding: 2%;
+     background-color: #ECEAC3;
 
 
 }
@@ -123,19 +134,12 @@
 }
 
 
-.linguagens{
-
-   background-color: #ECEAC3;
-   color: #000;
-   font-weight: bold;
-   padding: 2%;
-}
 
 
 .botoes{
 
     display: flex;
-     flex-wrap: wrap;
+
     justify-content: center;
     
 
@@ -151,11 +155,10 @@
      justify-content: center;
      align-items: center;
      margin: 5%;
-     margin-top: 20px;
+     margin-top: 5px;
      font-weight: bold;
      color: #fff;
 }
-
 
 
 

@@ -34,7 +34,7 @@ const Footer = () =>{
             <p>Contatos</p>
 
             <p>E-mail: linguasindigenasms@gmail.com</p>
-            <p>Profª Responsável: Adriana Viana Postigo Paravisini </p>
+            <p>Profª Responsável: Adriana Viana Postigo</p>
              </div>
 
         </div>
@@ -48,7 +48,9 @@ const Footer = () =>{
          <p>Projeto Linguas Indígenas MS.</p>
          </div>
      </footer>
-    );
+
+     
+);
 }
 
 export default Footer; 

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./ofaie.css";
-
+import "../linguagens.css";
 import ofaie1 from "../../../assets/ofaie1.svg";
 import ofaie2 from "../../../assets/ofaie2.svg";
 import ofaie3 from "../../../assets/ofaie3.svg";
@@ -100,13 +99,18 @@ const Ofaie = () => {
   });
 
   return (
-    <>
+    
       <div className="linguagens">
-        {/* topo: seu logo/ilustração animada por intervalo */}
+
+    
         <div className="apresentacao_ofaie">
           <div className="img_logo_ofaie">
             <img className="imagem_ofaie" src={imagensOfaie[idx]} alt="" />
           </div>
+
+          <div className="camada_escura" ></div>
+
+          <div className="texto_linguagem"> <h1 className="titulo_linguagem" >Língua Ofaié</h1> </div>
         </div>
 
         {/* seção com as três imagens sobrepostas que vão sumindo no scroll */}
@@ -132,7 +136,9 @@ const Ofaie = () => {
     
         </section>
 
-         <p style={{ fontWeight: "normal" }}>
+        <div className="blocos_texto"> 
+
+         <p className="bloco_texto">
           Este trabalho se propõe a analisar a história e a realidade contemporânea do
           povo indígena Ofaié, com enfoque em sua trajetória desde os tempos ancestrais
           até os dias atuais. Os Ofaié habitam a região de Anodhi, no município de
@@ -141,7 +147,7 @@ const Ofaie = () => {
           da Bodoquena, Rio Paraná e Sucuriú.
         </p>
 
-        <p style={{ fontWeight: "normal" }}>
+         <p className="bloco_texto">
           Na década de 1950, foram expulsos da fazenda Boa Esperança, em Brasilândia, e
           cerca de 200 índios se estabeleceram nas margens úmidas do Rio Verde, sob a
           proteção do Serviço de Proteção ao Índio (SPI). Após muitas dificuldades e
@@ -150,24 +156,29 @@ const Ofaie = () => {
           fazendeiros, sua população foi reduzida a poucas dezenas.
         </p>
 
+        </div>
 
+
+
+        <div className="video" >
 
        
 
-         <div className="audio_teste" > 
+       <iframe width="900" height="500" src="https://www.youtube.com/embed/-dKBt5btcq0?si=mRKDhMBsZCuBfsKB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+       </iframe>
 
-                <img src={audio}/>
 
-          </div>
+       </div>
 
           
 
 
 
      
+         <div className="blocos_texto"> 
 
 
-        <p style={{ fontWeight: "normal" }}>
+        <p className="bloco_texto">
           Este trabalho se propõe a analisar a história e a realidade contemporânea do
           povo indígena Ofaié, com enfoque em sua trajetória desde os tempos ancestrais
           até os dias atuais. Os Ofaié habitam a região de Anodhi, no município de
@@ -176,7 +187,7 @@ const Ofaie = () => {
           da Bodoquena, Rio Paraná e Sucuriú.
         </p>
 
-        <p style={{ fontWeight: "normal" }}>
+        <p className="bloco_texto">
           Na década de 1950, foram expulsos da fazenda Boa Esperança, em Brasilândia, e
           cerca de 200 índios se estabeleceram nas margens úmidas do Rio Verde, sob a
           proteção do Serviço de Proteção ao Índio (SPI). Após muitas dificuldades e
@@ -184,8 +195,10 @@ const Ofaie = () => {
           antepassados estavam sepultados. Na década de 1960, devido à perseguição dos
           fazendeiros, sua população foi reduzida a poucas dezenas.
         </p>
+
+         </div>
       </div>
-    </>
+    
   );
 };
 

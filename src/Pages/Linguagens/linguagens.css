@@ -1,0 +1,439 @@
+
+.linguagens{
+
+   width: 100%;
+    background-color: #ECEAC3;
+    height: 100%;
+}
+
+linguagens > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px; /* Um respiro para o conteúdo não colar nas bordas */
+
+}
+
+/* Aplica o efeito de sobreposição APENAS nestas classes */
+.infos_textuais1, 
+.infos_textuais2, .sessoes_linguagens {
+  position: sticky;
+  top: 0;
+   /* Ocupa a tela cheia para a próxima vir por cima */
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+  z-index: 1;       /* Base para o empilhamento */
+}
+
+.imagem_ofaie{
+
+   
+    width: 110%;
+   
+
+  
+}
+.img_logo_ofaie{
+
+   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    z-index: 0;
+}
+
+.texto_linguagem{
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+   background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
+  width: 100%;
+  height: 95vh;
+  z-index: 1;
+  inset: 0;   
+}
+
+.titulo_linguagem{
+
+  font-weight: bold;
+  font-size:900%;
+}
+
+
+
+
+
+.sessao_mapa{
+
+    display: flex;
+    background-color: #fff;
+    color: #000;
+
+     background-color: #fff;
+    color: #000;
+     padding: 2%;
+
+}
+
+.mapa{
+
+    margin-top: 10%;
+
+    width: 90%;
+    height: 90%;
+}
+
+.imagem_ofaie_lingua{
+
+    width: 100%;
+}
+
+
+
+.card_tocador{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_audio{
+
+
+    height: 100px;
+    width: 1200px;
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+.botao_audio{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #fff;
+    color:#1C1C1C;
+    font-size: large;
+
+}
+
+
+
+/* Seção que controla a duração da animação de fade por scroll */
+.stack-section {
+  position: relative;
+  height: 700vh; /* Aumente/diminua para alongar/encurtar a transição */
+  width: 100%;
+}
+
+/* Mantém o "canvas" visível enquanto você percorre a seção */
+.stack-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* ocupa a viewport toda */
+}
+
+/* Área onde as imagens ficam sobrepostas */
+.stack-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Todas as imagens empilhadas, ocupando a viewport */
+.stack-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ou 'cover' se preferir preencher */
+  transition: opacity 0.06s linear; /* suaviza micro saltos */
+  will-change: opacity;
+}
+
+/* Espaços de conteúdo que geram a rolagem */
+.stack-spacer {
+  height: 75vh; /* ajuste para controlar ritmo da leitura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.audio_teste{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.blocos_texto{
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5%;
+ 
+  
+  
+ 
+}
+
+.bloco_texto{
+
+   font-size:x-large;
+   font-weight: 500;
+   text-align: justify;
+   height: auto;
+   width: 500px;
+    text-align: justify;
+
+}
+
+.tabelas{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video{
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.texto_com_imagem{
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  
+  
+}
+
+.imagem_contextual{
+
+  width: 800px;
+  margin: 2%;
+}
+/*
+.infos_textuais1{
+
+  width: 100%;
+  height: auto;
+  height: calc(100vh - 80px);
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 2%;
+  padding-bottom: 5%;
+  position: sticky;
+  top: 80px;
+  
+
+
+}
+
+.infos_textuais2{
+
+  width: 100%;
+  height: auto;
+  min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
+  background-color: #ECEAC3;
+  color: #1C1C1C;
+  padding: 2%;
+  justify-content: center;
+  
+}
+  */
+
+/* A div container deve permitir que os filhos sejam sticky */
+
+.div_scroll {
+  
+  /* Remova o display: flex se as seções forem empilhadas verticalmente */
+  display: flex; 
+  width: 100%;
+  position: relative;
+  background-color: #1a1a1a; /* Garante fundo nas brechas */
+}
+
+.div_scroll h1 {
+   
+    
+    padding: 20px;
+    
+}
+
+
+/* As seções ou divs que vão scrollar */
+.infos_textuais1 {
+    position: sticky;
+    /* O 'top' deve ser a altura aproximada do seu H1 para não sobrepor */
+   
+    height: 100vh;  
+    width: 100%;
+    background-color: #1C1C1C; /* Fundo sólido para não ser transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.infos_textuais2 {
+    position: sticky;
+    /* O 'top' deve ser a altura aproximada do seu H1 para não sobrepor */
+   
+    height: 100vh;  
+    width: 100%;
+    background-color: #ECEAC3; /* Fundo sólido para não ser transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1C1C1C;
+}
+
+.bloco_texto3 {
+    /* Se você quer que CADA parágrafo se sobreponha, 
+       o sticky vai aqui. Se for a div toda, mantenha na classe pai */
+    position: sticky;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    font-size: 1.3rem;
+    line-height: 1.6; /* Voltei para um valor normal de leitura */
+    align-items: flex-start;
+     text-align: justify;
+   
+}
+
+.titulo_sessao{
+
+  font-size: x-large;
+  font-weight: bolder;
+  color: #1C1C1C;
+  margin: 0;
+}
+
+.titulo_sessao_escura{
+
+  font-size: x-large;
+  font-weight: bolder;
+  color: #FFF;
+  
+
+}
+
+.sessao_linguagens2 {
+
+     height: 500px;
+     width: 550px;
+    
+     background-color: #8A1D1B ;
+     border-radius: 12px;
+     padding: 16px;
+     box-shadow: 0 2px 8px rgba(0,0,0,.08);
+     margin: 20px ;
+     border-radius: 10px;
+     color: #fff;
+     justify-content: center;
+     align-items: center;
+     font-size: x-large;
+     font-weight: bolder;
+    
+  
+}
+
+.sessoes_leitura_horizontal {
+  display: grid;
+  grid-auto-flow: column;
+ 
+  gap: 66px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 16px 16px;
+
+  scrollbar-width: none;
+
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+ 
+  
+}
+
+.destaque_textual{
+
+  padding: 5%;
+  align-self: center;
+  font-size: xxx-large;
+  font-weight: bolder;
+  margin-left: 15%;
+}
+
+
+table {
+            width: 90%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            padding: 5%;
+            margin-bottom: 10%;
+        }
+        caption {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+           
+            font-weight: normal;
+        }
+        .row-header {
+            text-align: left;
+            
+        }
+        .source {
+            font-size: 0.9em;
+            margin-top: 5px;
+        }

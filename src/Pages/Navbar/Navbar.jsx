@@ -1,5 +1,6 @@
+ import { useState } from 'react';
  import { Link } from 'react-router-dom';
-
+ import { SlArrowDown } from "react-icons/sl";
  import logo from "../../assets/logo_minimo.svg"
 
 
@@ -9,6 +10,9 @@
 
 const Navbar = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const alteraIsOpen = () => setIsOpen(!isOpen);
 
 
     return(
@@ -36,6 +40,37 @@ const Navbar = () => {
            <div className='paginas_menu' > <h4 className='texto' >Início</h4> </div>
            
            </Link>
+
+           <div className="dropdown" >
+
+           <button onClick={alteraIsOpen} className="dropdown-button" > 
+
+
+          
+
+           <div className='paginas_menu' > <h4 className='texto' >Línguas <SlArrowDown /></h4> </div>
+           
+           
+
+           </button>
+
+           {isOpen && (
+
+            <ul className="dropdown-list"> 
+
+            <li> <Link to= "/guato"> Guató</Link></li> 
+            <li> <Link to= "/kadiweu"> Kadiweu</Link></li> 
+            <li> <Link to= "/kinikinau"> Kinikinau</Link></li>
+            <li> <Link to= "/ofaie"> Ofaié</Link></li>
+            <li> <Link to= "/terena"> Terena</Link></li> 
+            <li> <Link to= "/braslind">Braslind</Link></li> 
+           </ul>
+
+            )
+           
+           }
+
+           </div>
 
 
             <Link to= "/projeto">

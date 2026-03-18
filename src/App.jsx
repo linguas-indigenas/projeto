@@ -1,10 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
+
 
 import Navbar from "../src/Pages/Navbar/Navbar";
 import Footer from "../src/Pages/Footer/Footer";
 import Home from "../src/Pages/Home";
 import Pesquisa from "../src/Pages/Pesquisa/Pesquisa";
-import Ofaie from "../src/Pages/Linguagens/ofaie/Ofaie"
+import Guato from "../src/Pages/Linguagens/guato/guato";
+import Kadiweu from "../src/Pages/Linguagens/kadiweu/kadiweu";
+import Kinikinau from "../src/Pages/Linguagens/kinikinau/kinikinau";
+import Ofaie from "../src/Pages/Linguagens/ofaie/Ofaie";
+import Terena from "./Pages/Linguagens/terena/terena";
 import './App.css'
 
 function App() {
@@ -20,6 +26,8 @@ function App() {
       
     <Router basename="/projeto">
 
+      <ScrollToTop />
+
     
      
       <div className="pt-20">
@@ -30,7 +38,11 @@ function App() {
           <Route  path="/" element={     <Home/> }/>
 
            <Route  path="/pesquisa" element={  <Pesquisa />  } />
-              <Route  path="/ofaie" element={  <Ofaie />  } />
+           <Route  path="/guato" element={  <Guato />  } />
+           <Route  path="/kadiweu" element={  <Kadiweu />  } />
+           <Route  path="/kinikinau" element={  <Kinikinau />  } />
+           <Route  path="/ofaie" element={  <Ofaie />  } />
+           <Route  path="/terena" element={  <Terena />  } />
         </Routes>
          <Footer/>
       </div>

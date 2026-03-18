@@ -91,50 +91,39 @@ const Home = () => {
                      <div className='icone_texto_card'> <img src={nosso_curso} />  </div>
                 </div>
 
-                
-                  
-
-                   
-
-
             </div>
 
             
         </div>
-          <img className='desenho_indigena' src={desenho_indigena} />
 
+        <img className='desenho_indigena' src={desenho_indigena} />
 
-        <div className='linguagens'>
-
+        <div className='sessao_linguagens' >
           
-              <div> <h1>Escolha uma língua para conhecer</h1></div>
+              <div> <h1>Escolha uma língua para conhecer</h1> </div>
 
             <div className='botoes' >
 
                 <Link to='/ofaie' className='botao_linguagem' > <h1>OFAIÉ  </h1></Link>
-               <button className='botao_linguagem' > <h1>  TERENA </h1> </button>
-               <button className='botao_linguagem' > <h1>  KINIKINAU</h1></button>
-
-
+                <Link to='/terena' className='botao_linguagem' > <h1>TERENA</h1></Link>
+                <Link to='/kinikinau' className='botao_linguagem' > <h1>KINIKINAU</h1></Link>
+      
             </div>
 
               <div className='botoes' >
 
-               <button className='botao_linguagem' > <h1>GUATÓ</h1> </button>
-               <button className='botao_linguagem' > <h1>KADIWEU </h1> </button>
-              
-
-
+               <Link to='/guato' className='botao_linguagem' > <h1>GUATÓ</h1></Link>
+               <Link to='/kadiweu' className='botao_linguagem' > <h1>KADIWEU</h1></Link>
 
             </div>
+
         </div>
+
         <img className='desenho_indigena' src={desenho_indigena} />
 
 
         </div>
-
-      
-           
+   
     </main>
 
     )

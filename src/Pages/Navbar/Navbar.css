@@ -40,11 +40,19 @@
    
 }
 
+.texto{
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 
 .paginas_projeto{
 
     display: flex;
     justify-content: center;
+    align-items: center;
    
   
       width: 100%;
@@ -58,18 +66,58 @@
 }
 
 
-.paginas_menu h4 {
+.paginas_menu {
 
-     text-decoration: none;
      color: #fff;
+     cursor: pointer;
+     background-color: #1C1C1C;
+     color: white;
+     border: none;
+     font-size: medium;
+   
 
 
 }
 
-.texto{
 
-    text-decoration: none;
+.dropdown {
+  position: relative; /* Necessário para posicionar a lista */
+  display: inline-block;
 }
+
+.dropdown-button {
+ 
+ 
+  background-color: #1C1C1C;;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.dropdown-list {
+  position: absolute; /* Faz o menu flutuar */
+  
+  left: 0;
+  background-color: #1C1C1C;;
+  
+  border-radius: 4px;
+  list-style: none;
+ 
+  
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-list li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f1f1f1;
+}
+
 
 
 @media (min-width: 600px) {
