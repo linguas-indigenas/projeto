@@ -11,6 +11,7 @@ import Kadiweu from "../src/Pages/Linguagens/kadiweu/kadiweu";
 import Kinikinau from "../src/Pages/Linguagens/kinikinau/kinikinau";
 import Ofaie from "../src/Pages/Linguagens/ofaie/Ofaie";
 import Terena from "./Pages/Linguagens/terena/terena";
+import Sobre from "./Pages/Sobre/sobre"
 import './App.css'
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
            <Route  path="/kinikinau" element={  <Kinikinau />  } />
            <Route  path="/ofaie" element={  <Ofaie />  } />
            <Route  path="/terena" element={  <Terena />  } />
+           <Route  path="/sobre" element={  <Sobre />  } />
         </Routes>
          <Footer/>
       </div>

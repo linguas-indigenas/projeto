@@ -118,10 +118,14 @@
   background-color: #f1f1f1;
 }
 
-
-
-@media (min-width: 600px) {
-
+.menu-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-right: 20px;
+}
 .paginas_projeto{
 
    
@@ -129,4 +133,54 @@
 }
 
 
+@media (max-width: 768px) {
+
+
+.menu-hamburger {
+        display: block; /* Aparece no mobile */
+        z-index: 1001;
+    }
+
+    .content {
+        justify-content: space-between; /* Logo de um lado, hambúrguer do outro */
+        padding: 0 10px;
+    }
+
+    .paginas_projeto {
+        display: none; /* Esconde o menu padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Logo abaixo da navbar */
+        left: 5%;
+        width: 90%;
+        background-color: #1C1C1C;
+        border-radius: 10px;
+        padding: 20px 0;
+        gap: 1.5rem;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Quando o estado 'menuMobileAberto' for true, esta classe será aplicada */
+    .paginas_projeto.aberto {
+        display: flex;
+    }
+
+    .dropdown-list {
+        position: static; /* No mobile, o dropdown empurra os itens de baixo */
+        width: 100%;
+        background-color: #2a2a2a;
+        box-shadow: none;
+        text-align: center;
+    }
+    
+    .dropdown-button {
+        width: 100%;
+    }
+
+
 }
+
+
+   
+
+ 

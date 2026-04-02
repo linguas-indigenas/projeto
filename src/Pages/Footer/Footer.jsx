@@ -15,16 +15,15 @@ const Footer = () =>{
 
         <div className="dados_uteis" > 
 
-
+        <div className="div-logo-com-redes-sociais" >
        
         <img className="logo_completo" src={logo_completo}/>
-
         <div className="redes_sociais">
             <p>Siga-nos:</p>
             <div className="icone_redes"> <FaInstagram/></div>
             <div className="icone_redes" ><FaFacebookF/></div>
         </div>
-        
+        </div>
 
 
         <div className="dados_contatos" >

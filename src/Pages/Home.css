@@ -139,8 +139,9 @@
 .botoes{
 
     display: flex;
-
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     
 
 }
@@ -148,8 +149,8 @@
 .botao_linguagem{
 
     display: flex;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     border-radius: 100%;
      background-color: #8A1D1B ;
      justify-content: center;
@@ -161,7 +162,28 @@
 }
 
 
+.controles-scroll {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+    padding-top: 1%;
+    gap: 20px;
+    
+}
 
+.controles-scroll button {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.controles-scroll button:hover {
+    background: #555;
+}
 
 
 
@@ -172,7 +194,7 @@
 
 
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
 
    
   .img_logo{
@@ -200,7 +222,9 @@
 
 }
 
-
+.botoes{
+    flex-direction: row;
+}
 .botao_linguagem{
 
    
@@ -208,6 +232,8 @@
     width: 250px;
    
 }
+
+
 
 
 

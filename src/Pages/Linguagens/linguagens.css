@@ -6,16 +6,7 @@
     height: 100%;
 }
 
-linguagens > section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 40px; /* Um respiro para o conteúdo não colar nas bordas */
 
-}
 
 /* Aplica o efeito de sobreposição APENAS nestas classes */
 .infos_textuais1, 
@@ -52,14 +43,14 @@ linguagens > section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+ 
    background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.55),
     rgba(0, 0, 0, 0.35)
   );
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   z-index: 1;
   inset: 0;   
 }
@@ -71,20 +62,16 @@ linguagens > section {
 }
 
 
-
-
-
-.sessao_mapa{
-
+.div_scroll > .infos_textuais1:first-child, .infos_textuais2:last-child  {
+    flex: 0 0 47%; /* Aumenta a coluna da imagem para 45% da tela */
     display: flex;
-    background-color: #fff;
-    color: #000;
-
-     background-color: #fff;
-    color: #000;
-     padding: 2%;
-
+   
+    align-items: center;
 }
+
+
+
+
 
 .mapa{
 
@@ -97,6 +84,7 @@ linguagens > section {
 .imagem_ofaie_lingua{
 
     width: 100%;
+
 }
 
 
@@ -194,20 +182,22 @@ linguagens > section {
   align-items: flex-start;
   justify-content: center;
   padding: 5%;
- 
-  
-  
- 
 }
 
+.blocos_texto_alinhados{
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5%;
+}
 .bloco_texto{
 
    font-size:x-large;
    font-weight: 500;
    text-align: justify;
    height: auto;
-   width: 500px;
-    text-align: justify;
+   text-align: justify;
 
 }
 
@@ -233,77 +223,58 @@ linguagens > section {
   display: flex;
   width: 100%;
   align-items: center;
-  
+}
+
+
+
+.div_imagem{
+
+  width: 100vh;
   
 }
+
+
+.div-titulo{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .imagem_contextual{
 
-  width: 800px;
-  margin: 2%;
-}
-/*
-.infos_textuais1{
-
+ 
   width: 100%;
-  height: auto;
-  height: calc(100vh - 80px);
-  background-color: #1C1C1C;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  padding: 2%;
-  padding-bottom: 5%;
-  position: sticky;
-  top: 80px;
-  
-
-
+  margin: 0;
+  object-fit: cover;
 }
 
-.infos_textuais2{
-
-  width: 100%;
-  height: auto;
-  min-height: 100dvh;
-   display: flex;
-   flex-direction: column;
-  background-color: #ECEAC3;
-  color: #1C1C1C;
-  padding: 2%;
-  justify-content: center;
-  
+.imagem_conteudo{
+  width: 40%;
+  padding: 5%;
 }
-  */
 
-/* A div container deve permitir que os filhos sejam sticky */
 
 .div_scroll {
   
-  /* Remova o display: flex se as seções forem empilhadas verticalmente */
+  
   display: flex; 
   width: 100%;
   position: relative;
-  background-color: #1a1a1a; /* Garante fundo nas brechas */
-}
-
-.div_scroll h1 {
-   
-    
-    padding: 20px;
-    
+  background-color: #1a1a1a; 
+  align-items: flex-start;
+  
 }
 
 
-/* As seções ou divs que vão scrollar */
 .infos_textuais1 {
     position: sticky;
-    /* O 'top' deve ser a altura aproximada do seu H1 para não sobrepor */
-   
-    height: 100vh;  
+    min-height: 100vh;
+    height: auto; 
     width: 100%;
-    background-color: #1C1C1C; /* Fundo sólido para não ser transparente */
+    background-color: #1C1C1C; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,15 +283,43 @@ linguagens > section {
 
 .infos_textuais2 {
     position: sticky;
-    /* O 'top' deve ser a altura aproximada do seu H1 para não sobrepor */
-   
-    height: 100vh;  
+    min-height: 100vh;
+    height: auto;  
     width: 100%;
-    background-color: #ECEAC3; /* Fundo sólido para não ser transparente */
+    background-color: #ECEAC3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #1C1C1C;
+}
+
+.section-clara-relativa {
+
+  position: relative;
+  min-height: 90vh;
+  height: auto;  
+  z-index: 10;
+  width: 100%;
+  background-color: #ECEAC3; /* Fundo sólido para não ser transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #1C1C1C;
+}
+
+.section-escura-relativa {
+
+  position: relative;
+  min-height: 90vh;
+  height: auto;  
+  z-index: 10;
+  width: 100%;
+  background-color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
 }
 
 .bloco_texto3 {
@@ -332,9 +331,6 @@ linguagens > section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
-    
     font-size: 1.3rem;
     line-height: 1.6; /* Voltei para um valor normal de leitura */
     align-items: flex-start;
@@ -342,43 +338,104 @@ linguagens > section {
    
 }
 
-.titulo_sessao{
+.blocosTexto{
 
-  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-sessao{
+
+  font-size: xxx-large;
   font-weight: bolder;
-  color: #1C1C1C;
-  margin: 0;
+  color: #1a1a1a;
+  
+  
 }
 
 .titulo_sessao_escura{
 
-  font-size: x-large;
+  font-size: xxx-large;
   font-weight: bolder;
   color: #FFF;
+   
+   
   
 
 }
 
-.sessao_linguagens2 {
+.bloco-leitura-vertical {
 
      height: 500px;
-     width: 550px;
-    
+ 
+     width: 450px;
+     background-color: #ECEAC3;
+     border-radius: 12px;
+     padding: 16px;
+     box-shadow: 0 2px 8px rgba(0,0,0,.08);
+     margin: 20px ;
+     border-radius: 10px;
+     color: #1C1C1C;
+     justify-content: center;
+     align-items: center;
+}
+
+.bloco-leitura-vertical-vermelho {
+
+     height: 450px;
+ 
+     width: 450px;
      background-color: #8A1D1B ;
      border-radius: 12px;
      padding: 16px;
      box-shadow: 0 2px 8px rgba(0,0,0,.08);
      margin: 20px ;
      border-radius: 10px;
-     color: #fff;
+     color: #1C1C1C;
      justify-content: center;
      align-items: center;
-     font-size: x-large;
-     font-weight: bolder;
-    
-  
 }
 
+.bloco-leitura-vertical-bg {
+
+    position: relative; /* Necessário para conter a imagem absoluta */
+ 
+     height: 500px;
+ 
+     width: 1000px;
+  overflow: hidden; /* Garante que a imagem não vaze */
+  color: #fff;
+  border-radius: 10px;
+}
+
+.conteudo-sobre-imagem {
+  position: relative;
+  z-index: 2; /* Fica na frente da imagem */
+  padding: 40px;
+  
+  /* Opcional: Adiciona o overlay escuro aqui */
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-background-absoluta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* O "pulo do gato": faz a tag img se comportar como background-size: cover */
+  object-fit: cover;
+  object-position: center;
+  
+  z-index: 1; /* Fica no fundo */
+}
 .sessoes_leitura_horizontal {
   display: grid;
   grid-auto-flow: column;
@@ -397,6 +454,16 @@ linguagens > section {
   
 }
 
+.bloco-texto-vertical{
+
+  font-size: large;
+   font-weight: 450;
+   text-align: justify;
+   height: auto;
+   width: 90%;
+   text-align: justify;
+}
+
 .destaque_textual{
 
   padding: 5%;
@@ -406,6 +473,29 @@ linguagens > section {
   margin-left: 15%;
 }
 
+.divMiniatura{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imgMiniatura{
+
+  width: 100%;
+}
+
+.icones{
+
+  width: 50px;
+}
+
+.fotos{
+
+width: 30%;
+}
 
 table {
             width: 90%;
@@ -437,3 +527,99 @@ table {
             font-size: 0.9em;
             margin-top: 5px;
         }
+
+@media (max-width: 768px) {
+
+
+.imagem_ofaie{
+
+   
+    
+   object-fit: cover;
+   width: 100%;
+   height: 100vh;
+   
+
+  
+}
+
+
+.titulo_linguagem{
+
+  font-weight: bold;
+  font-size:350%;
+}
+
+.texto_com_imagem{
+
+  flex-direction: column;
+}
+
+.imagem_conteudo{
+  width: 100%;
+  padding: 0;
+}
+
+.div_scroll{
+  flex-direction: column;
+}
+
+.titulo-sessao{
+
+  font-size: x-large;
+
+}
+
+.titulo_sessao_escura{
+   font-size: x-large;
+}
+
+.tabelas{
+
+  flex-direction: column;
+  overflow-x: auto; /* Ativa o scroll horizontal se necessário */
+  -webkit-overflow-scrolling: touch;
+  padding-left: 5%;
+  align-items: flex-start;
+  
+}
+
+.table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+
+        }
+       
+ .source {
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+
+.div_imagem{
+ display: flex;
+  width: 85vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+.imagem_contextual{
+  width: 80%;
+  
+}
+
+.bloco-leitura-vertical-bg {
+
+     height: 600px;
+     width: 400px;
+}
+
+.bloco-texto-vertical{
+
+ 
+   width: 80%;
+   
+}
+
+}

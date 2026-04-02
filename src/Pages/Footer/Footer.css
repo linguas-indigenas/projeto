@@ -64,3 +64,44 @@
   width: 100%;
 
 }
+
+.div-logo-com-redes-sociais{
+
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+
+
+  .logo_completo{
+     height: 100px;
+     width:  100px;
+}
+
+.dados_uteis{
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+
+}
+
+.dados_contatos div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.redes_sociais{
+
+  justify-content: flex-end;
+}
+
+
+}
