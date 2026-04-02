@@ -470,6 +470,10 @@ const scroll = (ref, direction) => {
 
 <section  className="infos_textuais1"> 
 
+    <div className="blocos_texto" >
+        <h2 className="titulo_sessao_escura" >Fonologia</h2>
+        </div>
+
     <div className="tabelas">
            
          <table>
